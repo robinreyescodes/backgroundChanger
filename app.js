@@ -2,6 +2,12 @@
 const main = document.querySelector("main");
 const button = document.querySelector("#btn");
 const header = document.querySelector("#background-header");
+const container = document.querySelector(".container");
+
+setTimeout(function () {
+  container.classList.add("animated");
+}, 400);
+
 // body.style.backgroundColor = "blue";
 
 const hexElements = [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];

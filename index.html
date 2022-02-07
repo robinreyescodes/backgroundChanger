@@ -16,12 +16,25 @@
           Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         text-align: center;
         border: 1px solid black;
+
+        height: 100vh;
+        width: 100%;
+      }
+      div {
+        position: relative;
+        top: 46%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         gap: 20px;
-        height: 100vh;
+        transform: translateY(-50%);
+        opacity: 0;
+      }
+
+      .animated {
+        animation-duration: 1s;
+        animation-name: slidedown;
+        animation-fill-mode: forwards;
       }
 
       #btn {
@@ -32,13 +45,26 @@
         border: 1px solid black;
         border-radius: 3px;
       }
+
+      @keyframes slidedown {
+        from {
+          opacity: 0;
+          top: 46%;
+        }
+        to {
+          opacity: 1;
+          top: 50%;
+        }
+      }
     </style>
     <script src="app.js" defer></script>
   </head>
   <body>
     <main>
-      <h1 id="background-header">Background Changer</h1>
-      <button id="btn">Click Me</button>
+      <div class="container">
+        <h1 id="background-header">Background Changer</h1>
+        <button id="btn">Click Me</button>
+      </div>
     </main>
   </body>
 </html>
